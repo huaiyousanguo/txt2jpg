@@ -1,4 +1,4 @@
-package export;
+﻿package export;
 
 import java.awt.Color;
 import java.awt.Font;
@@ -100,18 +100,7 @@ public class TxtToJpg4 {
 
 			String str = null;
 			br.mark(1024 * 8);
-			// int i1=br.read();
-			// int i2=br.read();
-			// int i3=br.read();
-			// System.out.println((byte)i1);
-			// System.out.println((byte)i2);
-			// System.out.println((byte)i3);
-			// try{
-			// br.reset();
-			// }catch(Exception e)
-			// {
-			// e.printStackTrace();
-			// }
+			 
 			while (br.readLine() != null)
 				lines++;
 
@@ -120,11 +109,11 @@ public class TxtToJpg4 {
 				br.reset();
 			} catch (Exception e) {
 				System.out
-						.println("文件 " + file.getAbsolutePath() + "出现reset问题");
+						.println("文件 " + file.getAbsolutePath() + "出现reset问题,重新打开");
 				// e.printStackTrace();
 				br.close();
 				br = new BufferedReader(new InputStreamReader(
-						new FileInputStream(file), "gbk"));
+						new FileInputStream(file), enc));
 			}
 			if (height > MAX_HEIGHT) {
 				height = MAX_HEIGHT;
