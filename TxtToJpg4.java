@@ -35,7 +35,7 @@ public class TxtToJpg4 {
 		this.pattern = pattern;
 		init();
 	}
-
+	//初始化
 	public void init() {
 		this.regPattern = getPatterns(pattern);
 	}
