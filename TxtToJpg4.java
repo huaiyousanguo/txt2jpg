@@ -17,6 +17,7 @@ import java.util.regex.Pattern;
 import com.sun.image.codec.jpeg.JPEGCodec;
 import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
+//备注：请说明情况
 public class TxtToJpg4 {
 	private String filePath = ".";// 源文件位置
 	private String[] pattern;// 文件查找的正则
